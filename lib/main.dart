@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_math/ui/trig/trig_canvas.dart';
+import 'package:flutter_math/ui/trig/trig_canvas_1.dart';
+import 'package:flutter_math/ui/trig/trig_canvas_2.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: TrigCanvas(),
+      home: TrigCanvas2(),
     );
   }
 }
