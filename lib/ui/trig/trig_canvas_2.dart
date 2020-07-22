@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_math/ui/shared/size_config.dart';
 import 'package:flutter_math/ui/trig/trig_paint_3.dart';
+import 'package:flutter_math/ui/trig/trig_paint_circles.dart';
 import '../../extensions/size_extension.dart';
 import 'dart:math' as math;
 
@@ -45,7 +46,7 @@ class _TrigCanvas2State extends State<TrigCanvas2>
       width: 10.width,
       color: Colors.white,
       child: CustomPaint(
-        painter: TrigPainter3(animation.value),
+        painter: TrigPaintCircle(animation.value),
       ),
     );
   }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-class TrigPainter3 extends CustomPainter {
+class TrigPaintCircle extends CustomPainter {
   double angle;
 
-  TrigPainter3(this.angle);
+  TrigPaintCircle(this.angle);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -21,22 +21,14 @@ class TrigPainter3 extends CustomPainter {
     double centerY = height * 0.5;
     double centerX = width * 0.4;
     double offsetY = height * 0.4;
+    double radius = 100;
+
     // double speed = 0.1;
     // double angle = 0;
 
-    render() {
-      var y = centerY + math.sin(angle) * offsetY;
-
-      Rect rect = Rect.fromLTWH(centerX, y, 30, 0);
-      canvas.drawArc(rect, 0, math.pi * 2, false, paint);
-      // path1.fillType = PathFillType.evenOdd;
-      // path1.arcTo(rect, 0, math.pi * 2, false);
-
-      // angle += speed;
-    }
-
-    var y = centerY + math.sin(angle) * offsetY;
-    Rect rect = Rect.fromLTWH(centerX, y, width / 4, height / 8);
+    var y = centerY + math.sin(angle) * radius;
+    var x = centerX + math.cos(angle) * radius;
+    Rect rect = Rect.fromLTWH(x, y, width / 4, height / 8);
     canvas.drawArc(rect, 0, math.pi * 2, false, paint);
   }
 
