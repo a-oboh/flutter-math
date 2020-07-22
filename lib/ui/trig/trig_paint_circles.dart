@@ -21,13 +21,13 @@ class TrigPaintCircle extends CustomPainter {
     double centerY = height * 0.5;
     double centerX = width * 0.4;
     double offsetY = height * 0.4;
-    double radius = 100;
+    double radius = 150;
 
     // double speed = 0.1;
     // double angle = 0;
 
-    var y = centerY + math.sin(angle) * radius;
-    var x = centerX + math.cos(angle) * radius;
+    var y = centerY + math.sin(angle * 3) * radius;
+    var x = centerX + math.cos(angle * 2) * radius;
     Rect rect = Rect.fromLTWH(x, y, width / 4, height / 8);
     canvas.drawArc(rect, 0, math.pi * 2, false, paint);
   }

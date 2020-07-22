@@ -21,7 +21,7 @@ class _TrigCanvas2State extends State<TrigCanvas2>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 3),
     );
 
     animation = Tween<double>(begin: 0.0, end: math.pi * 2).animate(controller)
